@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,400,600&display=swap');
+
+
+/* Variables */
+:root {
+  --primary: hsl(229, 6%, 66%);
+  --secondary: hsl(234, 12%, 34%);
+  --backgroundColor: hsl(0, 0%, 98%);
+}
+
+
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+
+body,
+p,
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Base styles */
+body {
+  font-size: 10px;
+  background-color: var(--backgroundColor);
+  /* to cut objects if they are too big in X direction */
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+/* Fonts */
+h1,
+h2 {
+  font-weight: 600;
+  color: var(--secondary);
+}
+
+p {
+  font-size: 1.5em;
+  color: var(--primary);
+}
+
+h1,
+h2 {
+  line-height: 1.5em;
+  font-size: 2.3em;
+}
+
+
+/* Mobile styles */
+.main {
+  margin: 0 3em;
+}
+
+.info {
+  margin-top: 8em;
+  margin-bottom: 7em;
+  text-align: center;
+}
+
+.info-paragraph {
+  margin-top: 1.5em;
+}
+
+
+.features {
+  margin-bottom: 8em;
+}
+
+.feature {
+  margin: 0 auto;
+  position: relative;
+  padding: 2em;
+  height: 21em;
+  width: 25em;
+  border-radius: 5px;
+  box-shadow: 1px 3px 5px 3px rgb(216, 226, 236);
+  margin-bottom: 2em;
+  background-color: #fff;
+}
+
+.feature-first {
+  border-top: 0.4em solid hsl(180, 62%, 55%);
+}
+
+.feature-second {
+  border-top: 0.4em solid hsl(0, 78%, 62%);
+}
+
+.feature-third {
+  border-top: 0.4em solid hsl(34, 97%, 64%);
+}
+
+.feature-fourth {
+  border-top: 0.4em solid hsl(212, 86%, 64%);
+}
+
+.info-first-heading {
+  font-weight: 400;
+}
+
+.feature-heading {
+  font-size: 2em;
+  margin-bottom: 0.4em;
+}
+
+.feature-paragraph {
+  font-size: 1.3em;
+}
+
+.feature-image {
+  position: absolute;
+  right: 2em;
+  bottom: 2em;
+}
+
+
+/* small tablet styles */
+@media screen and (min-width: 620px) {
+  .info {
+    margin-left: auto;
+    margin-right: auto;
+    width: 48em;
+  }
+
+  .info h1,
+  .info h2 {
+    font-size: 3em;
+  }
+
+  .info p {
+    font-size: 1.6em;
+  }
+
+
+  .features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .feature {
+    margin-left: 2em;
+    flex-grow: 1;
+    height: 24em;
+  }
+
+  .feature-image {
+    width: 7em;
+  }
+}
+
+
+
+
+/* Desktop styles */
+@media screen and (min-width: 1024px) {
+  .features {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .features-middle {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .feature {
+    width: 30em;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .feature {
+    width: 36em;
+  }
+}
